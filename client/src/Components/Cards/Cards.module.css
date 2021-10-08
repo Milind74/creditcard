@@ -1,0 +1,21 @@
+.soloCard {
+  box-shadow: 3px 3px 10px #ddd;
+  padding: 15px;
+  border-radius: 7px;
+  height: 160px;
+  position: relative;
+}
+
+.prodHeading {
+  font-size: 14px;
+  color: #052f5f;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.prodDesc {
+  font-size: 12px;
+  font-weight: 600;
+  color: #69829f;
+}
