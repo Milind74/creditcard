@@ -53,6 +53,9 @@ const CreateStudent = () => {
     loan rates in the market.
     </p>
   </div>
+  <div>
+    aaaa
+  </div>
 
 
 </div>
@@ -167,11 +170,12 @@ const CreateStudent = () => {
         />
         <br />
         <br />{" "}
-        <div style={{display:"flex",width:"400px",marginLeft:"150px"}}>
+        <div style={{display:"flex",width:"400px",marginLeft:"130px"}}>
 
         <input style={{ border:"1px solid black",marginTop:"15px"}} class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-       <p style={{width:"500px",fontSize:"12px"}}>I hereby appoint conquerors as my authorised 
-         representative to receive my credit information from Cibil </p>
+       <p style={{width:"500px",fontSize:"12px",}}>I hereby appoint conquerors as my authorised 
+         representative to <br />
+         receive my credit information from Cibil </p>
        
        </div>
  <br />

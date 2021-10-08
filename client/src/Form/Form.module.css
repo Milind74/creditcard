@@ -1,11 +1,11 @@
 .container{
-    width:95%;
+    width:99%;
     height: 1000px;
     border: 1px solid black;
     display:  grid;
-    grid-template-columns: 48% 48%;
+    grid-template-columns: 45% 51%;
     margin: auto;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Open Sans, Sans-Serif !important;
 
 }
 
@@ -28,7 +28,12 @@
     outline: none;
 
 }
-
+.rightside>h1{
+    color: #1b1dc7;
+}
+.rightside>p{
+    color: gray;
+}
 .rightside>form>button{
     width:400px;
     height: 40px;
@@ -42,10 +47,10 @@
     border: 1px solid black;
     width:100% ;
     height: 1000px;
-    background-color: rgb(10, 10, 241);
     color: white;
-    font-family: 'Open Sans', sans-serif
-
+    font-family: 'Open Sans', sans-serif;
+    background-color: #1b1dc7;
+    ;
 }
 
 .leftchilddiv1{
@@ -69,11 +74,13 @@
        /* width: 100px ; */
        font-size: 30px;
        margin:  10px;
+       
     
 }
 .leftchilddiv1 h4{
     margin-top: -14px;
     margin: 10px;
+
 }
 .leftchilddiv2 h3{
     font-size: 30px;
@@ -88,6 +95,10 @@
     text-align: center;
 }
 .leftchilddiv2>p{
+    line-height: 2;
+    font-weight: lighter;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
     font-size: 20px;
     font-size: 22px;
     width: 400px ;
