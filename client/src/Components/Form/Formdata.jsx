@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from "./Form.module.css";
+import { Carousel } from "./Carousel";
 
 const FormData = () => {
   const [details, setDetails] = useState({
@@ -54,7 +55,7 @@ const FormData = () => {
     </p>
   </div>
   <div>
-    aaaa
+    <Carousel/>
   </div>
 
 
@@ -191,7 +192,8 @@ const FormData = () => {
       </form>
    </div>
       <div>
-        
+      
+
             
             </div>
     </div>
