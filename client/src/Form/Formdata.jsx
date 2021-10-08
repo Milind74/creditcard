@@ -33,7 +33,27 @@ const CreateStudent = () => {
   return (
       <div  className={styles.container}>
 <div  className={styles.leftside}>
-  
+  <div className={styles.leftchilddiv1} >
+    <h3>Creditloan </h3>
+     <img className={styles.img1} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTZbOdnCOD_7x9LFVcAtSKpUkCYQhpEtAyJA&usqp=CAU" alt="" />
+     <h4>#Paiso sae <br /> badh kr kaun</h4>
+  </div>
+  <div  className={styles.leftchilddiv2}>
+    <div >
+    <h3> Your credit health matters…</h3>
+    </div>
+    
+    <p>
+   
+    Your credit score is more than just a <br /> number.
+        A better score can help unlock the things you
+    want most</p>
+    <p>
+    —like a new credit card or the best
+    loan rates in the market.
+    </p>
+  </div>
+
 
 </div>
     <div className={styles.rightside}>
