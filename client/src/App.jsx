@@ -1,11 +1,11 @@
+import logo from "./logo.svg";
 import "./App.css";
-import { Header } from "./Components/Header/Header";
-import { Cards } from "./Components/Cards/Cards";
+import FormData from "./Components/Form/Formdata";
+
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Cards />
+      <FormData />
     </div>
   );
 }
