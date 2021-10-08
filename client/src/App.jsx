@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Formdata from './Form/Formdata';
+import FormData from './Components/Form/Formdata';
 
 function App() {
   return (
     <div className="App">
-     <Formdata/>
+     <FormData/>
     </div>
   );
 }

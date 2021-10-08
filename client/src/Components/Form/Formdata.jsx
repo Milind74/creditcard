@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from "./Form.module.css";
 
-const CreateStudent = () => {
+const FormData = () => {
   const [details, setDetails] = useState({
 
     firstname: "",
@@ -198,4 +198,4 @@ const CreateStudent = () => {
   );
 };
 
-export default CreateStudent;
+export default FormData;
