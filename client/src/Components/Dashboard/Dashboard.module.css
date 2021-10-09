@@ -1,0 +1,85 @@
+.cardSpecification {
+  width: 100%;
+  display: inline-block;
+  background: #ffffff
+    url(https://creditreport.paisabazaar.com/credit_report_banner_desktop.png)
+    no-repeat;
+  height: 129px;
+  padding: 20px 0px;
+  cursor: pointer;
+  border: none;
+  border-right: none;
+  border-radius: 0px;
+  background-size: 100%;
+  box-shadow: 0 0 2px 0 rgb(0 0 0 / 14%), 0 2px 2px 0 rgb(147 110 110 / 12%),
+    0 1px 3px 0 rgb(92 75 75 / 20%);
+  margin-bottom: 20px;
+}
+.DashboardBody {
+  text-align: left;
+  width: 73%;
+}
+.DashboardFirstHeading {
+  font-size: 25px;
+  color: #052f5f;
+  padding: 12px 0;
+}
+.DashboardHeading {
+  color: #052f5f;
+  font-size: 21px;
+  font-weight: 400;
+  padding: 12px 0;
+}
+.applicationDiv {
+  width: 100%;
+  padding: 10px 10px 10px 0;
+
+  display: flex;
+  text-align: center;
+  justify-items: space-between;
+  border-radius: 7px;
+  margin: 10px auto 20px auto;
+}
+.applicationDiv span {
+  text-align: left;
+}
+.imageSize {
+  width: 90%;
+}
+.cardBox {
+  box-shadow: 1px 1px 5px;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+.cardBoxButton {
+  text-align: right;
+}
+.priceStyle {
+  font-weight: 600;
+}
+.cardBoxButton button {
+  margin-right: 20px;
+}
+.nav {
+  text-align: center;
+  width: 90%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+.boxContainer {
+  width: 90vw;
+  padding: 20px;
+  display: flex;
+  box-sizing: border-box;
+  margin: auto;
+  justify-content: space-between;
+}
+.parawidth {
+  width: 80%;
+  text-align: left;
+  margin: 0px;
+}

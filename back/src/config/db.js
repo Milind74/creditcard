@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const connect=()=>{
-    return mongoose.connect("mongodb://127.0.0.1:27017/signup");
+    return mongoose.connect("mongodb+srv://dig30786:Not5zQyeElDWuYBg@cluster0.mcj6r.mongodb.net/credit-card-db?retryWrites=true&w=majority");
 }
 
 module.exports=connect;
