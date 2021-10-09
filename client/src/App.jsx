@@ -8,7 +8,8 @@ import Logout from './Component/Logout';
 import { initialState,reducer } from "./Reducer/reducer";
 import { Header } from "./Components/Header/Header";
 import { Cards } from "./Components/Cards/Cards";
-
+import Aproved from "./Component/Aproved"
+import Reject from "./Component/reject";
 
  export const userContext=createContext();
   const Routing = () => {
@@ -37,14 +38,18 @@ import { Cards } from "./Components/Cards/Cards";
 function App() {
 const [state, dispatch] = useReducer(reducer, initialState)
   return (
-      <BrowserRouter>
+    <BrowserRouter>
       <>
         <userContext.Provider value={{ state, dispatch }}>
-         <Navbar />
-       
-        
-         <Routing />
-     
+          <Navbar />
+
+          <Route path="/aproved">
+            <Aproved />
+          </Route>
+          <Route path="/reject">
+            <Reject/>
+          </Route>
+          <Routing />
         </userContext.Provider>
       </>
     </BrowserRouter>

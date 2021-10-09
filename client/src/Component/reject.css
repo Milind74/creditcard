@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.cont{
+  width: 25%;
+  height:400px;
+  background-image: url("https://www.animatedimages.org/data/media/1498/animated-sad-image-0024.gif");
+
+ 
+  margin:0 auto;
+  margin-top: 50px;
+
+}
