@@ -11,6 +11,11 @@ import { Cards } from "./Components/Cards/Cards";
 import { Dashboard } from "./Components/Dashboard/Dasboard";
 import Status from "./Components/Form/Status";
 
+import Aproved from "./Component/Aproved"
+import Reject from "./Component/reject";
+// import { Dashboard } from "./Components/Dashboard/Dasboard";
+import Footer from "./Component/footer";
+
 export const userContext = createContext();
 const Routing = () => {
   return (
@@ -19,6 +24,7 @@ const Routing = () => {
         <Header />
         <Cards />
         <Dashboard/>
+        <Footer/>
       </Route>
 
       <Route path="/signup" component={Signup} />
@@ -57,6 +63,12 @@ function App() {
         <userContext.Provider value={{ state, dispatch }}>
           <Navbar />
 
+          <Route path="/aproved">
+            <Aproved />
+          </Route>
+          <Route path="/reject">
+            <Reject/>
+          </Route>
           <Routing />
         </userContext.Provider>
       </>

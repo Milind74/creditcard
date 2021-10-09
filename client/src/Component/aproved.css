@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.conta{
+  width: 25%;
+  height:400px;
+  margin-top: 20px;
+  background-image: url("https://bestanimations.com/media/fireworks2/212323546ba-colorful-fireworks-animated-gif-pic.gif");
+  background-attachment: fixed;
+  margin:0 auto;
+
+}
