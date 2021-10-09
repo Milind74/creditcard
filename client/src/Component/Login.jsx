@@ -33,7 +33,7 @@ const Login = () => {
       else{
         dispatch({type:"USER",payload:true})
         window.alert("Login success")
-        history.push("/");
+        history.push("/landing");
       }
     }
     return (

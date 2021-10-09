@@ -1,0 +1,113 @@
+/* *{border:1px solid black} */
+.container{
+    width:99%;
+    height: auto;
+    /* border: 1px solid black; */
+    display:  grid;
+    grid-template-columns: 45% 51%;
+    margin: auto;
+    font-family: Open Sans, Sans-Serif !important;
+
+}
+
+.rightside{
+    /* border: 1px solid black; */
+    width:60% ;
+    height: auto;
+    margin-left: 25%;
+
+
+}
+
+
+.rightside>form{
+    margin-top:50px ;
+}
+.rightside>form>input{
+    width: 400px;
+    height: 40px;
+    background-color: #f0f2f5;
+    border: none;
+    outline: none;
+
+}
+.rightside>h1{
+    color: #1b1dc7;
+}
+.rightside>p{
+    color: gray;
+}
+.rightside>form>button{
+    width:400px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+
+}
+
+.leftside{
+    /* border: 1px solid black; */
+    width:100% ;
+    height: auto;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    background-color:#404CEC;
+    ;
+}
+
+.leftchilddiv1{
+    display: flex;
+    width: 400px;
+    margin: 10px;
+    color:  white;
+    margin-top:-10px ;
+    /* border: 1px solid black; */
+
+}
+
+.img1{
+    border-radius: 50%;
+    height: 20px;
+    margin-top: 15px;
+    
+
+}
+.leftchilddiv1 h3{
+       /* width: 100px ; */
+       font-size: 30px;
+       margin:  10px;
+       
+    
+}
+.leftchilddiv1 h4{
+    margin-top: -14px;
+    margin: 10px;
+
+}
+.leftchilddiv2 h3{
+    font-size: 30px;
+}
+
+.leftchilddiv2{
+    /* width: 400px ; */
+    height: 400px;
+    /* border:  1px solid black; */
+    margin: auto;
+    text-decoration-line: inherit;
+    text-align: center;
+}
+.leftchilddiv2>p{
+    line-height: 2;
+    font-weight: lighter;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    font-size: 20px;
+    font-size: 22px;
+    width: 400px ;
+    /* height: 300px; */
+    margin: auto;
+/* border: 1px solid black; */
+
+
+}
