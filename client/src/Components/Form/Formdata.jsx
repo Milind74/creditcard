@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from "./Form.module.css";
+import { Carousel } from "./Carousel";
 
 const FormData = () => {
   const [details, setDetails] = useState({
@@ -26,8 +27,9 @@ const FormData = () => {
 
   const onsubmit = async (e) => {
     e.preventDefault();
-    var res = await axios.post("http://localhost:8000/custumer", details);
+    var res = await axios.post("http://localhost:8000/customer", details);
     console.log("post=", res);
+    window.alert("sucess")
   };
 
   return (
@@ -54,7 +56,7 @@ const FormData = () => {
     </p>
   </div>
   <div>
-    aaaa
+    <Carousel/>
   </div>
 
 
@@ -170,7 +172,7 @@ const FormData = () => {
         />
         <br />
         <br />{" "}
-        <div style={{display:"flex",width:"400px",marginLeft:"130px"}}>
+        <div style={{display:"flex",width:"400px",marginLeft:"0px"}}>
 
         <input style={{ border:"1px solid black",marginTop:"15px"}} class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
        <p style={{width:"500px",fontSize:"12px",}}>I hereby appoint conquerors as my authorised 
@@ -191,7 +193,8 @@ const FormData = () => {
       </form>
    </div>
       <div>
-        
+      
+
             
             </div>
     </div>
