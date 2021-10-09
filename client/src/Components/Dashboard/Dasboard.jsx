@@ -1,6 +1,7 @@
 import style from "./Dashboard.module.css";
 import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
+import { Link } from "react-router-dom";
 export const Dashboard = () => {
   const arr = [
     {
@@ -81,9 +82,10 @@ export const Dashboard = () => {
                   <span className={style.priceStyle}>Price: ₹{ele.price}</span>
                 </div>
                 <div className={style.cardBoxButton}>
-                  <button type="button" className="btn btn-primary">
+             <Link to="status">     <button type="button" className="btn btn-primary">
                     See Status
                   </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -101,9 +103,11 @@ export const Dashboard = () => {
                   <span className={style.priceStyle}>Price: ₹{ele.price}</span>
                 </div>
                 <div className={style.cardBoxButton}>
-                  <button type="button" className="btn btn-primary">
+                <Link to="/landing">  <button type="button" className="btn btn-primary">
                     Apply
                   </button>
+                  </Link>
+
                 </div>
               </div>
             ))}

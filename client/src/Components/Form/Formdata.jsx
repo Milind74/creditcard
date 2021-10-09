@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from "./Form.module.css";
 import { Carousel } from "./Carousel";
-
+import { Link } from "react-router-dom";
 const FormData = () => {
   const [details, setDetails] = useState({
 
@@ -189,14 +189,16 @@ const FormData = () => {
        </div>
  <br />
         <br />{" "}
-        <button
-          style={{
+        <Link to="/dashboard">
+              <button
+             style={{
             
            
-          }}
+               }}
         >
           Get your credit score
         </button>
+        </Link>
       </form>
    </div>
       <div>

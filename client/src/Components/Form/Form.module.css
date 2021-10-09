@@ -8,6 +8,7 @@
     margin: auto;
     font-family: Open Sans, Sans-Serif !important;
     margin-top: 20px;
+    padding: 20px
 
 }
 
@@ -39,7 +40,7 @@
 .rightside>p{
     color: gray;
 }
-.rightside>form>button{
+.rightside>form>a>button{
     width:400px;
     height: 40px;
     border-radius: 4px;
