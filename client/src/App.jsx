@@ -9,6 +9,7 @@ import { initialState, reducer } from "./Reducer/reducer";
 import { Header } from "./Components/Header/Header";
 import { Cards } from "./Components/Cards/Cards";
 import { Dashboard } from "./Components/Dashboard/Dasboard";
+import Status from "./Components/Form/Status";
 
 export const userContext = createContext();
 const Routing = () => {
@@ -17,6 +18,7 @@ const Routing = () => {
       <Route exact path="/">
         <Header />
         <Cards />
+        <Dashboard/>
       </Route>
 
       <Route path="/signup" component={Signup} />
@@ -25,6 +27,19 @@ const Routing = () => {
       </Route>
       <Route exact path="/landing">
         <FormData />
+      </Route>
+
+      <Route exact path="/landing">
+        <FormData/>
+      </Route>
+
+      <Route exact path="/status">
+        <Status/>
+      </Route>
+
+
+      <Route exact path="/dashboard">
+        <Dashboard/>
       </Route>
 
       <Route path="/logout">
