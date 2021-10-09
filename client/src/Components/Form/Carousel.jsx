@@ -57,7 +57,7 @@ export const Carousel = () => {
           <div className={style.slidechild1}>
             <div className={style.slidechild}><h4 style={{textAlign:"center",marginTop:"15px"}}>1</h4></div>
             <div className={style.slidechild3}>
-              <h2>Track your Credit Health</h2>
+              <h4>Track your Credit Health</h4>
 
               <p style={{fontSize:"15px"}}>
               Fill the form on the right just once &<br /> monitor your credit 
@@ -71,7 +71,7 @@ export const Carousel = () => {
           <div className={style.slidechild1}>
             <div className={style.slidechild}><h4 style={{textAlign:"center",marginTop:"15px"}}>2</h4></div>
             <div className={style.slidechild3}>
-              <h2>Get deep Insights</h2>
+              <h4>Get deep Insights</h4>
 
               <p style={{fontSize:"15px"}}>
               See what makes your score <br />  change & ways to improve 
@@ -84,7 +84,7 @@ export const Carousel = () => {
           <div className={style.slidechild1}>
             <div className={style.slidechild}><h4 style={{textAlign:"center",marginTop:"15px"}}>3</h4></div>
             <div className={style.slidechild3}>
-              <h2>Make Better Decisions</h2>
+              <h4>Make Better Decisions</h4>
 
               <p style={{fontSize:"15px"}}>
               Personalised recommendations <br />
@@ -100,7 +100,7 @@ export const Carousel = () => {
           <div className={style.slidechild1}>
             <div className={style.slidechild}><h4 style={{textAlign:"center",marginTop:"15px"}}>4</h4></div>
             <div className={style.slidechild3}>
-              <h2>Fix possible Errors</h2>
+              <h4>Fix possible Errors</h4>
 
               <p style={{fontSize:"15px"}}>
                 If you see any discrepancy in you

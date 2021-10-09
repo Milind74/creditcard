@@ -20,6 +20,13 @@ const FormData = () => {
 
   const { firstname, lastname, age, gender,pan,pincode,email,mobile,city } = details;
 
+  const Civilscore=(max,min)=>{
+    return Math.floor(Math.random()*(max-min+1)+min)
+
+  }
+  console.log(Civilscore(1000,300))
+
+
   const handlechange = (e) => {
     // e.preventDefault()
     setDetails({ ...details, [e.target.name]: e.target.value });

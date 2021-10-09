@@ -8,11 +8,13 @@ import Logout from './Component/Logout';
 import { initialState,reducer } from "./Reducer/reducer";
 import { Header } from "./Components/Header/Header";
 import { Cards } from "./Components/Cards/Cards";
+import { Dashboard } from "./Components/Dashboard/Dasboard";
 
 
  export const userContext=createContext();
   const Routing = () => {
     return (
+      <>
       <Switch>
         <Route exact path="/">
           <Header />
@@ -20,6 +22,7 @@ import { Cards } from "./Components/Cards/Cards";
         </Route>
 
         <Route path="/signup" component={Signup} />
+
         <Route path="/login">
           <Login />
         </Route>
@@ -31,6 +34,8 @@ import { Cards } from "./Components/Cards/Cards";
           <Logout />
         </Route>
       </Switch>
+      </>
+
     );
   }
 
