@@ -1,0 +1,15 @@
+.footer {
+  background-color: black;
+  color: white;
+  height: auto;
+}
+.footerFirst {
+  display: flex;
+  margin-left: 180px;
+  gap: 170px;
+  padding-top: 20px;
+}
+.footerSecond {
+  text-align: center;
+  color: white;
+}

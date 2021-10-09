@@ -10,7 +10,8 @@ import { Header } from "./Components/Header/Header";
 import { Cards } from "./Components/Cards/Cards";
 import Aproved from "./Component/Aproved"
 import Reject from "./Component/reject";
-import { Dashboard } from "./Components/Dashboard/Dasboard";
+// import { Dashboard } from "./Components/Dashboard/Dasboard";
+import Footer from "./Component/footer";
 
 export const userContext = createContext();
 const Routing = () => {
@@ -19,6 +20,7 @@ const Routing = () => {
       <Route exact path="/">
         <Header />
         <Cards />
+        <Footer/>
       </Route>
 
       <Route path="/signup" component={Signup} />
