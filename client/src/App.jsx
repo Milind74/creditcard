@@ -17,7 +17,6 @@ const Routing = () => {
       <Route exact path="/">
         <Header />
         <Cards />
-        <Dashboard />
       </Route>
 
       <Route path="/signup" component={Signup} />
@@ -30,9 +29,6 @@ const Routing = () => {
 
       <Route path="/logout">
         <Logout />
-      </Route>
-      <Route path="/profile">
-        <Dashboard />
       </Route>
     </Switch>
   );
