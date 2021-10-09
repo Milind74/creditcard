@@ -15,6 +15,7 @@ import Aproved from "./Component/Aproved"
 import Reject from "./Component/reject";
 // import { Dashboard } from "./Components/Dashboard/Dasboard";
 import Footer from "./Component/footer";
+import Random from "./Components/Random";
 
 export const userContext = createContext();
 const Routing = () => {
@@ -23,7 +24,7 @@ const Routing = () => {
       <Route exact path="/">
         <Header />
         <Cards />
-        <Dashboard/>
+        {/* <Dashboard/> */}
         <Footer/>
       </Route>
 
@@ -35,13 +36,13 @@ const Routing = () => {
         <FormData />
       </Route>
 
-      {/* <Route exact path="/landing">
+      <Route exact path="/landing">
         <FormData/>
-      </Route> */}
+      </Route>
 
-      {/* <Route exact path="/status">
+      <Route exact path="/status">
         <Status/>
-      </Route> */}
+      </Route>
 
       
 
@@ -67,6 +68,10 @@ function App() {
           <Route path="/aproved">
             <Aproved />
           </Route>
+          <Route path="/random">
+            <Random />
+          </Route>
+
           <Route path="/reject">
             <Reject/>
           </Route>

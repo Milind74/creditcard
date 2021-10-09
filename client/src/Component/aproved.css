@@ -11,3 +11,23 @@
   margin:0 auto;
 
 }
+.card-body p:nth-child(2){
+  font-size: 19px;
+  font-weight: 600;
+  color:rgb(8, 113, 218)
+}
+.card-body p:nth-child(3){
+  font-size: 17px;
+  font-weight: bold;
+
+}
+
+.card-header{
+  font-size: 17px;
+  font-weight: bold;
+  color: lightgreen;
+
+}
+.card-body{
+  text-align:centre;
+}

@@ -1,13 +1,12 @@
-/* *{
+*{
     margin: 0;
     padding: 0;
 }
-.con{
+.contai1{
   width: 25%;
   height:400px;
   margin-top: 20px;
-  background-image: url("https://media4.giphy.com/media/JTypanrPFaCqoVBQ3Y/giphy.gif");
-  background-attachment: fixed;
+
   margin:0 auto;
 
-} */
+}

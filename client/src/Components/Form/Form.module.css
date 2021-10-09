@@ -40,7 +40,7 @@
 .rightside>p{
     color: gray;
 }
-.rightside>form>a>button{
+.rightside>form>button{
     width:400px;
     height: 40px;
     border-radius: 4px;

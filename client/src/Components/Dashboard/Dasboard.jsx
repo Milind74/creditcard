@@ -82,7 +82,7 @@ export const Dashboard = () => {
                   <span className={style.priceStyle}>Price: ₹{ele.price}</span>
                 </div>
                 <div className={style.cardBoxButton}>
-             <Link to="status">     <button type="button" className="btn btn-primary">
+             <Link to="/status">     <button type="button" className="btn btn-primary">
                     See Status
                   </button>
                   </Link>

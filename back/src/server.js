@@ -15,7 +15,6 @@ const profile=require("./controller/profile.controller")
 const logout=require("./controller/logout.controler")
 const custumer = require("./controller/student.contreller");
 
-// Pallav----------------------
 
 
 app.use(cors());
@@ -24,9 +23,14 @@ app.use("/signup",userRouter);
 app.use("/login",logingRouter);
 app.use("/profile", profile);
 app.use("/logout", logout);
-// Pallav----------------------
 
 
+
+app.get("/cibilscore",(req,res)=>{
+    let x=Math.random()*800+500
+res.send({x:x})
+
+})
 
 
 app.listen(8000,async()=>{
