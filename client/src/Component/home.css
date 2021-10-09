@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.homeContainer{
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color:#e2e8ec;
+  
+}
+.left1{
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-left:10%;
+}
+.post1{
+    margin-left: 1%;
+    margin-top: 20px;
+     height: auto;
+    display: flex;
+    overflow: hidden;
+    padding-bottom: 20px;
+    background-color: white;
+    margin-top: 10px;
+    padding: 20px;
+    width: 620px;
+    border-radius: 8px;
+    flex-direction: column;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+    background-color: #fff;
+      margin-bottom: 20px;
+}
+.rightPost{
+    margin-top: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-bottom: 20px;
+    background-color: white;
+    margin-top: 10px;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+    background-color: #fff;
+    text-align: center;
+}
+.left1>i{
+    margin-top: 15px;
+    width: 150px;
+    height: 18px;
+    font-size: small;
+
+}
+.left1>i:hover{
+    background-color: white;
+    border-radius: 5px;
+}
+.name3{
+    margin-top: 15px;
+}
+.btne{
+    width: 100%;
+    height: 40px;
+    margin-top: 8px;
+    margin-right: 20px;
+    border-radius: 25px;
+    border:1px solid #21cf7a;
+    background-color: white;
+}
+.btne1{
+    width: 100%;
+    height: 40px;
+    margin-top: 8px;
+    margin-right: 20px;
+    border-radius: 25px;
+    border:1px solid #21cf7a;
+    background-color: #21cf7a;
+    color: white;
+}
+.btne:hover{
+    background-color:#21cf7a;
+}
+.btne1:hover{
+    background-color:#047c42;
+}
+.like>button{
+    margin-top: 20px;
+}
+.sponsered{
+    display: flex;
+}
+.sponsered>h3{
+    text-align: left;
+    margin-left: -20px;
+}
