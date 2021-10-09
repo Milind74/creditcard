@@ -35,14 +35,15 @@ const Routing = () => {
         <FormData />
       </Route>
 
-      <Route exact path="/landing">
+      {/* <Route exact path="/landing">
         <FormData/>
-      </Route>
+      </Route> */}
 
-      <Route exact path="/status">
+      {/* <Route exact path="/status">
         <Status/>
-      </Route>
+      </Route> */}
 
+      
 
       <Route exact path="/dashboard">
         <Dashboard/>

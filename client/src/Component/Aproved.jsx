@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import "./aproved.css"
 const Aproved = () => {
     return (
@@ -11,9 +12,11 @@ const Aproved = () => {
             <p class="card-text">you are eligible</p>
 
             <div class="d-grid gap-2 col-6 mx-auto">
-              <button style={{marginLeft:"0px",color:"black", width:"200px"}} class="btn btn-primary" type="button">
+         <Link to="/dashboard">
+             <button style={{marginLeft:"0px",color:"black", width:"200px"}} class="btn btn-primary" type="button">
                 Go to dashboard
               </button>
+              </Link> 
             </div>
           </div>
           <div class="card-footer text-muted"></div>
