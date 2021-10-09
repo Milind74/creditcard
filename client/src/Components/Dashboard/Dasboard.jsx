@@ -27,18 +27,8 @@ export const Dashboard = () => {
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div
-              style={{
-                textAlign: "center",
-                width: "90%",
-                display: "flex",
-                margin: "auto",
-                alignItems: "center",
-                justifyContent: "center",
-                justifyItems: "center",
-              }}
-            >
-              <p style={{ textAlign: "left", margin: "0px" }}>
+            <div className={style.nav}>
+              <p className={style.parawidth}>
                 We have updated our T&C for Paisabazaar Credit Score Services,
                 By continuing your use of Paisabazaar account, you agree with
                 the updated Terms of Service - Paisabazaar Credit Score
@@ -54,16 +44,7 @@ export const Dashboard = () => {
           </div>
         </div>
       </nav>
-      <div
-        style={{
-          width: "90vw",
-          padding: "20px",
-          display: "flex",
-          boxSizing: "border-box",
-          margin: "auto",
-          justifyContent: "space-between",
-        }}
-      >
+      <div className={style.boxContainer}>
         {" "}
         {/* dashboard */}
         <div>
