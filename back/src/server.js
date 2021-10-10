@@ -17,7 +17,7 @@ const custumer = require("./controller/student.contreller");
 
 const CardController = require('./controller/card.controller');
 
-app.use(cors());
+app.use(cors({origin:true,credentials:true}));
 app.use("/customer", custumer);
 app.use("/signup",userRouter);
 app.use("/login",logingRouter);

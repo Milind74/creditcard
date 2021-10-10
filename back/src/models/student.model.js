@@ -44,6 +44,26 @@ const studentSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    card_limit:{ 
+      type: String,
+      required: false,
+      default:""
+    },
+    card_number:{ 
+      type: String,
+      required: false,
+      default:""
+    },
+    expiry_date:{ 
+      type: String,
+      required: false,
+      default:""
+    },
+    cvv:{ 
+      type: String,
+      required: false,
+      default:""
+    },
     status:{type:Number,required:false,default:0},
     card_apply:[{type:mongoose.Schema.Types.ObjectId,ref:"card",required:false}]
   },
