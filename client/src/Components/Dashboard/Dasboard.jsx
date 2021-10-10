@@ -2,27 +2,110 @@ import style from "./Dashboard.module.css";
 import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import { Link } from "react-router-dom";
+import { useEffect,useState } from "react";
+import axios from "axios";
+import Cards from 'react-credit-cards';
+//import swal from 'sweetalert';
+import swal from '@sweetalert/with-react';
+import 'react-credit-cards/es/styles-compiled.css';
 export const Dashboard = () => {
-  const arr = [
-    {
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0CpqrctE9K4G9sN-9HGYbzTgDjiXNyK03kA&usqp=CAU",
-      name: "xyz company",
-      price: 800,
-    },
-    {
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0CpqrctE9K4G9sN-9HGYbzTgDjiXNyK03kA&usqp=CAU",
-      name: "ABC company",
-      price: 600,
-    },
-    {
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0CpqrctE9K4G9sN-9HGYbzTgDjiXNyK03kA&usqp=CAU",
-      name: "pqr company",
-      price: 1200,
-    },
-  ];
+
+  const [arr,setarr] = useState([]);
+  const [apply,setApply] = useState([]);
+  const [loading,setLoading] = useState(true);
+  const [up,setup] = useState(false);
+  const [ca,setca] = useState({
+      cvc: '123',
+      expiry: '12/23',
+      focus: 'name',
+      name: 'Digvijay Singh',
+      number: '4901234556453456'
+  })
+
+  useEffect(async ()=>{
+    await axios({
+      method:'get',
+      url:'http://localhost:8000/card'
+    }).then(({data})=>{
+      setarr((arr)=>[...data.cardGet]);
+    }).catch(()=>{
+    });
+
+    await axios({
+      method:'get',
+      url:'http://localhost:8000/customer/616258688e4fba79fb7781f5'
+    }).then(({data})=>{
+      setApply((apply)=>[...data.student.card_apply]);
+    }).catch(()=>{
+    });
+
+
+  },[up]);
+
+
+  const handleApply = (id) => 
+  {
+    axios({
+      method:'patch',
+      url:'http://localhost:8000/card/apply/616258688e4fba79fb7781f5',
+      data:[id]
+    }).then(({data})=> {
+      swal("Apply Successfully!", "Dear Digvijay Wait for next Notification", "success");
+      setup(!up);
+    }).catch((err)=>{
+      swal("Error", "Something went Wrong !", "error");
+    })    
+  }
+
+
+  const handleStatus = () => 
+  {
+    axios({
+      method:'get',
+      url:'http://localhost:8000/customer/616258688e4fba79fb7781f5',
+    }).then(({data})=> {
+        const {status} = data.student;
+        console.log(status);
+        if(status == 0)
+        {
+          swal("Application is under Process", "Wait for next Notification", "warning");
+        }
+        else if(status == 1)
+        {
+
+          swal({
+            icon:'success',
+            text: "Congratulations Digvijay Bank Alloted this Card to You",
+            buttons: {
+              cancel: "Close",
+            },
+            content: (
+              <div>
+              <Cards
+                cvc={ca.cvc}
+                expiry={ca.expiry}
+                focused={ca.focus}
+                name={ca.name}
+                number={ca.number}
+              />
+              <div>
+               <h4>Your Credit limit is : 23000</h4>
+              </div>
+              </div>
+            )
+          })
+        }
+      // swal("Apply Successfully!", "Dear Digvijay Wait for next Notification", "success");
+      // setup(!up);
+    }).catch((err)=>{
+      swal("Error", "Something went Wrong !", "error");
+    })  
+  }
+
+
+
+
+
   return (
     <>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -72,42 +155,39 @@ export const Dashboard = () => {
           <div className={style.cardSpecification}></div>
           <span className={style.DashboardHeading}>My Applications</span>
           <div className={style.applicationDiv}>
-            {arr.map((ele) => (
+            {apply.map((ele) => (
               <div className={style.cardBox}>
-                <img src={ele.image} alt="" className={style.imageSize} />
+                <img src={ele.card_img} alt="" className={style.imageSize} />
                 <div>
-                  <span>{ele.name}</span>
+                  <span>{ele.card_name}</span>
                 </div>
                 <div>
-                  <span className={style.priceStyle}>Price: ₹{ele.price}</span>
+                  <span className={style.priceStyle}>Price: ₹{ele.card_fee}</span>
                 </div>
                 <div className={style.cardBoxButton}>
-             <Link to="/status">     <button type="button" className="btn btn-primary">
+                 <button type="button" className="btn btn-primary" onClick={handleStatus}>
                     See Status
                   </button>
-                  </Link>
                 </div>
               </div>
             ))}
           </div>
-          <span className={style.DashboardHeading}>My Recent Searches</span>
+          <span className={style.DashboardHeading}>Card Avaliable</span>
           <div className={style.applicationDiv}>
             {arr.map((ele) => (
               <div className={style.cardBox}>
-                <img src={ele.image} alt="" className={style.imageSize} />
+                <img src={ele.card_img} alt="" className={style.imageSize} />
 
                 <div>
-                  <span>{ele.name}</span>
+                  <span>{ele.card_name}</span>
                 </div>
                 <div>
-                  <span className={style.priceStyle}>Price: ₹{ele.price}</span>
+                  <span className={style.priceStyle}>Price: ₹{ele.card_fee}</span>
                 </div>
                 <div className={style.cardBoxButton}>
-                <Link to="/landing">  <button type="button" className="btn btn-primary">
+                  <button type="button" className="btn btn-primary" onClick={()=>handleApply(ele._id)}>
                     Apply
                   </button>
-                  </Link>
-
                 </div>
               </div>
             ))}

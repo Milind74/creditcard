@@ -64,7 +64,6 @@ function App() {
       <>
         <userContext.Provider value={{ state, dispatch }}>
           <Navbar />
-
           <Route path="/aproved">
             <Aproved />
           </Route>
