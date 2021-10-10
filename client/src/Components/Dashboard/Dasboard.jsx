@@ -65,13 +65,25 @@ export const Dashboard = () => {
       url:'http://localhost:8000/customer/616258688e4fba79fb7781f5',
     }).then(({data})=> {
         const {status} = data.student;
-        console.log(status);
-        if(status == 0)
-        {
-          swal("Application is under Process", "Wait for next Notification", "warning");
-        }
-        else if(status == 1)
-        {
+
+        const {card_limit,card_number,expiry_date,cvv} = data.student;
+            
+            const final = {
+               'number':card_number.split("-").join(""),
+               'cvc':cvv,
+               'expiry':expiry_date,
+               'limit':card_limit,
+               'focus':"number",
+               'name':"Digvijay Singh"
+            }
+            setca({final});
+            if(status == 0)
+            {
+              swal("Application is under Process", "Wait for next Notification", "warning");
+            }
+          else if(status == 1)
+          {
+
 
           swal({
             icon:'success',
@@ -82,14 +94,14 @@ export const Dashboard = () => {
             content: (
               <div>
               <Cards
-                cvc={ca.cvc}
-                expiry={ca.expiry}
-                focused={ca.focus}
-                name={ca.name}
-                number={ca.number}
+                cvc={final.cvc}
+                expiry={final.expiry}
+                focused={final.focus}
+                name={final.name}
+                number={final.number}
               />
               <div>
-               <h4>Your Credit limit is : 23000</h4>
+               <h4>Your Credit limit is : {final.limit}</h4>
               </div>
               </div>
             )
