@@ -5,6 +5,9 @@
 .con {
   width: 100%;
   display: flex;
+  /* border-bottom: 1px solid #cf2121; */
+  box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+
 }
 .search {
   width: 550px;
