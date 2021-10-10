@@ -19,7 +19,7 @@ const Navbar = () => {
             <div className="search">
               {" "}
               <input type="text" placeholder="Search" />{" "}
-              <i class="fas fa-search" style={{ color: "#21cf7a" }}></i>
+              <i class="fas fa-search" style={{ color: "#cf2121" }}></i>
             </div>
             {/* <Link to="/profile">profile</Link> */}
             <Link to="logout">
@@ -40,8 +40,8 @@ const Navbar = () => {
             </h1>
             <div className="search">
               {" "}
-              <input type="text" placeholder="Search" />{" "}
-              <i class="fas fa-search" style={{ color: "#21cf7a" }}></i>
+              <input type="text" placeholder="Search" />
+              <i class="fas fa-search" style={{ color: "#cf2121" }}></i>
             </div>
             {/* <Link to="/profile">profile</Link> */}
             <Link to="/signup">

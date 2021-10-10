@@ -39,8 +39,6 @@ const Footer = () => {
             <div>
               <p>ENQUIRIES</p>
               <br />
-              <p>Toll Free No. (9:30 AM to 6:30 PM)</p>
-              <br />
               <p>
              
                 <i class="fas fa-phone-alt"></i>1800-103-7344
