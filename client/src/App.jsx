@@ -8,10 +8,14 @@ import Logout from "./Component/Logout";
 import { initialState, reducer } from "./Reducer/reducer";
 import { Header } from "./Components/Header/Header";
 import { Cards } from "./Components/Cards/Cards";
+import { Dashboard } from "./Components/Dashboard/Dasboard";
+import Status from "./Components/Form/Status";
+
 import Aproved from "./Component/Aproved"
 import Reject from "./Component/reject";
 // import { Dashboard } from "./Components/Dashboard/Dasboard";
 import Footer from "./Component/footer";
+import Random from "./Components/Random";
 
 export const userContext = createContext();
 const Routing = () => {
@@ -20,6 +24,7 @@ const Routing = () => {
       <Route exact path="/">
         <Header />
         <Cards />
+        {/* <Dashboard/> */}
         <Footer/>
       </Route>
 
@@ -29,6 +34,20 @@ const Routing = () => {
       </Route>
       <Route exact path="/landing">
         <FormData />
+      </Route>
+
+      <Route exact path="/landing">
+        <FormData/>
+      </Route>
+
+      <Route exact path="/status">
+        <Status/>
+      </Route>
+
+      
+
+      <Route exact path="/dashboard">
+        <Dashboard/>
       </Route>
 
       <Route path="/logout">
@@ -45,10 +64,13 @@ function App() {
       <>
         <userContext.Provider value={{ state, dispatch }}>
           <Navbar />
-
           <Route path="/aproved">
             <Aproved />
           </Route>
+          <Route path="/random">
+            <Random />
+          </Route>
+
           <Route path="/reject">
             <Reject/>
           </Route>

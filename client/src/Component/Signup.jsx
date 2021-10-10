@@ -41,7 +41,7 @@ console.log("user",user)
     alert("invalid data")
   }
   else{
-    alert("Success")
+    // alert("Success")
    histroy.push("/login")
   }
   

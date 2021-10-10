@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from "./Form.module.css";
 import { Carousel } from "./Carousel";
+import { useHistory} from "react-router-dom";
 
 const FormData = () => {
+  let history=useHistory()
   const [details, setDetails] = useState({
 
     firstname: "",
@@ -20,23 +22,19 @@ const FormData = () => {
 
   const { firstname, lastname, age, gender,pan,pincode,email,mobile,city } = details;
 
-  const Civilscore=(max,min)=>{
-    return Math.floor(Math.random()*(max-min+1)+min)
-
-  }
-  console.log(Civilscore(1000,300))
-
 
   const handlechange = (e) => {
     // e.preventDefault()
     setDetails({ ...details, [e.target.name]: e.target.value });
   };
+  
 
   const onsubmit = async (e) => {
     e.preventDefault();
     var res = await axios.post("http://localhost:8000/customer", details);
     console.log("post=", res);
-    window.alert("sucess")
+    // window.alert("sucess")
+    history.push("/random")
   };
 
   return (
@@ -189,11 +187,12 @@ const FormData = () => {
        </div>
  <br />
         <br />{" "}
-        <button
-          style={{
+      
+              <button
+             style={{
             
            
-          }}
+               }}
         >
           Get your credit score
         </button>

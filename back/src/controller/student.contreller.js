@@ -8,12 +8,12 @@ router.post("/", async (req, res) => {
 });
 
 router.get("/", async (req, res) => {
-  const student = await Student.find().lean().exec();
+  const student = await Student.find().populate('card_apply').lean().exec();
   return res.status(200).send({ student });
 });
 
 router.get("/:id", async (req, res) => {
-  const student = await Student.findById(req.params.id).lean().exec();
+  const student = await Student.findById(req.params.id).populate('card_apply').lean().exec();
   return res.status(200).send({ student });
 });
 

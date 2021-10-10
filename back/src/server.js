@@ -15,8 +15,7 @@ const profile=require("./controller/profile.controller")
 const logout=require("./controller/logout.controler")
 const custumer = require("./controller/student.contreller");
 
-// Pallav----------------------
-
+const CardController = require('./controller/card.controller');
 
 app.use(cors());
 app.use("/customer", custumer);
@@ -24,12 +23,18 @@ app.use("/signup",userRouter);
 app.use("/login",logingRouter);
 app.use("/profile", profile);
 app.use("/logout", logout);
-// Pallav----------------------
+app.use("/card",CardController);
 
 
+
+app.get("/cibilscore",(req,res)=>{
+    let x=Math.random()*800+500
+res.send({x:x})
+
+})
 
 
 app.listen(8000,async()=>{
 await connect();
-console.log("Listening on port 4000")
+console.log("Listening on port 8000")
 })
